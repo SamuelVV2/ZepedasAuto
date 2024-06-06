@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!--CSS LINK-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--Navigation section-->
+    <header>
+        <div id="logo">Zepeda's <a id="logo-s">Auto Care</a></div>
+        <span class="sign"><a class="act" href="aboutus.html">Explore</a></span>
+    </header>
+
+    <!--Working on my slider-->
+    <div class="slider">
+        <!--slide 1-->
+        <div class="myslider fade" style="display: block;">
+            <div class="txt">
+                <h1>Need an oil change?</h1>
+            <p>
+                No problem! bring your car and will get it done in less than an hour
+            </p>
+            </div>
+            <img src="media/oil.jpg" alt="oilchange" style="width: 100%; height: 100%;">
+        </div>
+         <!--slide 2-->
+        <div class="myslider fade">
+            <div class="txt">
+                <h1>Whoops! car accident?</h1>
+            <p>
+                No worries! car accidents happen ALL the time, we'll make sure to leave it brand <br>
+                new and make you forget that awful memory
+            </p>
+            </div>
+            <img src="media/collision.jpeg" alt="oilchange" style="width: 100%; height: 100%;">
+        </div>
+         <!--slide 3-->
+        <div class="myslider fade">
+            <div class="txt">
+                <h1>Maybe you simply want a car checkup</h1>
+            <p>
+                We also provide that! we'll let you know any and every problem your car <br>
+                could have
+            </p>
+            </div>
+            <img src="media/maintnance.avif" alt="oilchange" style="width: 100%; height: 100%;">
+        </div>
+         <!--slide 4-->
+        <div class="myslider fade">
+            <div class="txt">
+                <h1>Need new brakes? or wheels</h1>
+            <p>
+               we'll change them in no time!
+            </p>
+            </div>
+            <img src="media/change.jpg" alt="oilchange" style="width: 100%; height: 100%;">
+        </div>
+         <!--slide 5-->
+        <div class="myslider fade">
+            <div class="txt">
+                <h1>Any messed up parts?</h1>
+            <p>
+                guess what? we'll ALSO change those in NO time!
+            </p>
+            </div>
+            <img src="media/bodypart.webp" alt="oilchange" style="width: 100%; height: 100%;">
+        </div>
+        <!--Adding the arrow keys-->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="dotsbox" style="text-align: center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+
+        </div>
+
+    </div>
+    <!--Javascript-->
+    <script src="script.js"></script>
+</body>
+</html>

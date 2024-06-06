@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Working on the sidebar*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: black;
+    padding: .4rem .8rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .main-content{
+    left: 250px;
+    width: calc(100% - 250px);
+}
+.sidebar.active{
+    width: 250px;
+}
+
+.sidebar #btn{
+    position: absolute;
+    color: white;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+.sidebar .top .logo{
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0%;
+}
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+.top .logo i{
+    font-size: 2rem;
+    margin-right: 5px;
+}
+.sidebar ul li{
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+}
+.sidebar ul li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+.sidebar ul li a:hover{
+    background-color: white;
+    color: black;
+}
+.sidebar ul li a i{
+    min-width: 50px;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-item{
+    opacity: 0;
+}
+.sidebar.active .nav-item{
+    opacity: 1;
+}
+
+/*Main content*/
+.main-content{
+    position: relative;
+    background-color: white;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+/*banner*/
+.banner{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5c6dcbf5f4755a48d74da555/1566361112664-1HH140I24PNJ60MQ0YKE/auto+repair+shop+houston+tx.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+.banner h1{
+    padding-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration:double;
+}
+button:hover{
+    color: red;
+    background-color: rgb(217, 217, 217);
+}
+button{
+    font-size: 25px;
+    padding: 10px;
+}
+.h1-1{
+    margin-left: 32%;
+    margin-top: 40px;
+}
+/*cards*/
+.container{
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+.card-container{
+    display: grid;
+    row-gap: 1rem;
+}
+.card-article{
+    position: relative;
+    overflow: hidden;
+}
+.card-img{
+    width: 300px;
+    height: 300px;
+    border-radius: 1.5rem;
+    margin-left: 15px;
+}
+.card-data{
+    width: 280px;
+    background-color:rgb(217, 217, 217);
+    padding: .5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+.card-description{
+    display: block;
+    font-size: 15px;
+    margin-bottom: .25rem;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
+    margin-bottom: .75rem;
+}
+.card-button{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+.card-button:hover{
+    text-decoration: underline;
+}
+.card-article:hover .card-data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.card-article:hover{
+    animation: remove-overflow 2s forwards;
+}
+.card-article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+.card-article:not(:hover) .card-data{
+    animation: remove-data 2s forwards;
+}
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY((-7rem));
+    }
+}
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+
+    50%{
+        transform: translateY(-10rem);
+    }
+
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+@keyframes show-overflow{
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+        
+    }
+}
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 1rem;
+    }
+    .card-data{
+        width: 250px;
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+@media screen and (min-width: 1120px){
+    .container{
+        height: 100vh;
+    }
+    .card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card-img{
+        width: 348px;
+    }
+    .card-data{
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+/*info*/
+.info-wrapper{
+    border: 2px white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 688px;
+    margin-left: 250px;
+}

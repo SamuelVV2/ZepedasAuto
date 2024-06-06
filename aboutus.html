@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <!--CSS link-->
+    <link rel="stylesheet" href="about.css">
+    <!--Boxicon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    
+    <!--Making my sidebar-->
+    <div class="sidebar">
+        <!--Creating the top part of the sidebar, so it'll be responsive-->
+        <div class="top">
+            <div class="logo">
+                <span>Zepedas Auto Care</span>
+            </div>
+            <!--This is the logo with the triple lines-->
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <hr>
+
+        <!--Here i'll place the company logo-->
+        <div class="user">
+        </div>
+
+        <!--My links-->
+        <ul>
+            <!--Home link-->
+            <li>
+               <a href="index.html">
+                <!--Home Icon-->
+                <i class="bx bx-home-alt-2"></i>
+                <span class="nav-item">Home</span>
+               </a>
+            </li>
+
+            <!--About Link-->
+            <li>
+                <!--About icon-->
+                <a href="aboutus.html">
+                    <!--about logo-->
+                    <i class="bx bx-body"></i>
+                    <span class="nav-item">About</span>
+                </a>
+
+                <!--Service Link-->
+            <li>
+                 <!--Service icon-->
+                 <a href="service.html">
+                    <i class="bx bx-signal-5"></i>
+                    <span class="nav-item">Services</span>
+                </a>
+            </li>
+
+            <!--Contact Link-->
+            <li>
+                 <!--Contact icon-->
+                 <a href="contact.html">
+                    <i class="bx bx-phone"></i>
+                    <span class="nav-item">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Main content of this page-->
+    <div class="main-content">
+        <!--Creating a banner-->
+        <div class="banner">
+            <h1 style="color: white; font-size: 60px;"><span style="color: red;">Zepedas</span> Auto Care</h1>
+
+            <div>
+                <button style="margin-left: 520px; margin-top: 15px;"><a href="contact.html" style="text-decoration: none; color: black;">Get in touch!</a></button>
+            </div>
+        </div>
+
+            <h1 class="h1-1" style="font-size: 50px;">What do <span style="color: red;">we </span>do?</h1>
+            <h3 style="color: red; margin-left: 350px;">Check out the different services that our company offers</h3>
+            <p style="margin-left: 430px;">for quick service, call the number <span style="color: red;">312-481-3120</span></p>
+        <!--Creating hover cards-->
+        <div class="container">
+            <div class="card-container">
+                <!--Card 1 -->
+                <article class="card-article">
+                    <img src="media/mech.jpg" alt="mechanic" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">provides high quality car repair services in Chicago</span>
+                        <h2 class="card-title">Mechanical repairs</h2>
+                        <a href="" class="card-button">read more</a>
+                    </div>
+                </article>
+                <!--card 2 -->
+                <article class="card-article">
+                    <img src="media/repair.jpg" alt="body" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">Busy roads and busy people are often the precursors to bumper damage, paint scratches, and dents on your car</span>
+                        <h2 class="card-title">Auto Body Repair</h2>
+                        <a href="" class="card-button">read more</a>
+                    </div>
+                </article>
+                <!--card 3 -->
+                <article class="card-article">
+                    <img src="media/collision (1).jpeg" alt="crash" class="card-img">
+
+                    <div class="card-data">
+                        <span class="card-description">traumatizing and stressful. It happens unexpectedly and we understand it not only has an impact on your vehicle, but on you as well! </span>
+                        <h2 class="card-title">Auto collision</h2>
+                        <a href="" class="card-button">read more</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+        <hr>
+        <!--Info content-->
+        <div class="info-wrapper" style="margin-bottom: 100px;">
+            <h1 style="color: red; margin-left: 45px; padding: 25px 150px; font-size: 40px;;">Welcome!</h1>
+            <p style="font-size: 25px;">
+                Uziel's Auto care is an auto repair shop based out of Chicago,
+                IL. We have been in business for 15 years and have highly experienced technicians
+                who bring years of knowledge, skill, and expertise. Whether you need car repair, auto body repair,
+                or collision repair, we can help!
+
+                <br><br>
+
+                At Uziel's Auto care, we provide complete auto body repair, affordable service, and prompt
+                response times. We know that if your car breaks down or you are in a collision, the last thing you
+                want to stress about is how long the repairs will take. We technicians are 
+                driven and work to get your car back to you in tip-top shape as soon as possible. We work on all
+                makes and models of cars and ensure you receive the highest quality repair work and customer
+                service.
+
+                <br><br>
+
+                Uziel's Auto care provides routine maintenance and car services such as oil and filter
+                changes and coolant flushes. We also work on suspensions and ensure that your vehicle not only
+                rides smoothly, but that you have the ability to control your vehicle fully, especially when
+                stopping and turning. We specialize in body work and will fix bumper scuffs and cracks, repair
+                scratches and scrapes, and fill holes. Uziel's Auto care also offers dent removal and
+                all repair related to collisions and accidents.
+
+                <br><br>
+
+                Uziel's Auto care is a full-service auto repair shop. With our extensive experience in car
+                 repair, auto body repair, and collision repair, we can help you fix all of your car problems.
+                  Call Uziel's Auto care today and find out how we can help
+            </p>
+        </div>
+
+    </div>
+
+    <!--Javascript-->
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

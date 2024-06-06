@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Collisions</title>
+    <!--css-->
+    <link rel="stylesheet" href="service.css">
+    <!--Boxicon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <!--Making my sidebar-->
+    <div class="sidebar">
+        <!--Creating the top part of the sidebar, so it'll be responsive-->
+        <div class="top">
+            <div class="logo">
+                <span>Zepedas Auto Care</span>
+            </div>
+            <!--This is the logo with the triple lines-->
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <hr>
+
+        <!--Here i'll place the company logo-->
+        <div class="user">
+        </div>
+
+        <!--My links-->
+        <ul>
+            <!--Home link-->
+            <li>
+               <a href="index.html">
+                <!--Home Icon-->
+                <i class="bx bx-home-alt-2"></i>
+                <span class="nav-item">Home</span>
+               </a>
+            </li>
+
+            <!--About Link-->
+            <li>
+                <!--About icon-->
+                <a href="aboutus.html">
+                    <!--about logo-->
+                    <i class="bx bx-body"></i>
+                    <span class="nav-item">About</span>
+                </a>
+
+                <!--Service Link-->
+            <li>
+                 <!--Service icon-->
+                 <a href="service.html">
+                    <i class="bx bx-signal-5"></i>
+                    <span class="nav-item">Services</span>
+                </a>
+            </li>
+
+            <!--Contact Link-->
+            <li>
+                 <!--Contact icon-->
+                 <a href="contact.html">
+                    <i class="bx bx-phone"></i>
+                    <span class="nav-item">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--main content-->
+    <div class="main-content">
+        <div class="Auto Collisions">
+            <h1 style="font-size: 50px;">Auto <span style="color: red;">Collisions</span></h1>
+            <img src="media/crash.jpg" alt="collision" style="width: 850px; margin-top: 30px; margin-bottom: 30px;">
+            <p style="margin-top: 30px; font-size: 20px;">
+
+                traumatizing and stressful. It happens unexpectedly and we understand it not
+                only has an impact on your vehicle, but on you as well! At Uziel's Auto Care,
+                we offer affordable collision repair services. We know you depend on your car to get
+                you through your day, which is why you can depend on us for highly efficient and 
+                timely collision repair services.
+                <br><br>
+                Our collision repair shop is staffed with skilled collision repair experts.
+                Our team of experienced technicians is equipped to rebuild and restore your car
+                to its original condition. We value your satisfaction and we know how important your 
+                car is. Uziel's Auto Care gives your vehicle adequate time and attention to ensure
+                we fix every detail.
+                <br><br>
+                Auto collisions do not just have an impact on the appearance of your vehicle, but they can
+                also cause extensive damage to the mechanics and body of your car as well. At Uziel's Auto
+                Care, we fully inspect your car and ensure we are not just attending to the exterior
+                issues, but to the interior issues as well.
+                <br><br>
+                Uziel's Auto Care can provide collision repair of all types of cars that have been in 
+                accidents. Our technicians possess the necessary skills to provide customer refinishing based
+                on the manufacturers specifications. We ensure that your car is 100% restored and safe to drive.
+
+                Uziel's Auto Care in Chicago, IL provides expert and professional collision repair services.
+                We can work on all types of vehicles and refinish them back to their original condition. If you 
+                have been in a collision, contact Uziel's Auto Care today to find out more!
+            </p>
+
+            <button style="margin-left: 800px;"><a href="body.html" style="text-decoration: none; color: white;">Next Page</a></button>
+        </div>
+    </div>
+
+     <!--Javascript-->
+     <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

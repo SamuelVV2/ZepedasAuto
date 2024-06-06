@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="contact.css">
+    <!--Boxicon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    <!--Making my sidebar-->
+    <div class="sidebar">
+        <!--Creating the top part of the sidebar, so it'll be responsive-->
+        <div class="top">
+            <div class="logo">
+                <span>Zepedas Auto Care</span>
+            </div>
+            <!--This is the logo with the triple lines-->
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <hr>
+
+        <!--Here i'll place the company logo-->
+        <div class="user">
+        </div>
+
+        <!--My links-->
+        <ul>
+            <!--Home link-->
+            <li>
+               <a href="index.html">
+                <!--Home Icon-->
+                <i class="bx bx-home-alt-2"></i>
+                <span class="nav-item">Home</span>
+               </a>
+            </li>
+
+            <!--About Link-->
+            <li>
+                <!--About icon-->
+                <a href="aboutus.html">
+                    <!--about logo-->
+                    <i class="bx bx-body"></i>
+                    <span class="nav-item">About</span>
+                </a>
+
+                <!--Service Link-->
+            <li>
+                 <!--Service icon-->
+                 <a href="service.html">
+                    <i class="bx bx-signal-5"></i>
+                    <span class="nav-item">Services</span>
+                </a>
+            </li>
+
+            <!--Contact Link-->
+            <li>
+                 <!--Contact icon-->
+                 <a href="contact.html">
+                    <i class="bx bx-phone"></i>
+                    <span class="nav-item">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Main content of this page-->
+    <div class="main-content">
+        <section>
+            <h4 class="sectionHeader">Contact Us</h4>
+            <h1 class="heading">Get In Touch!</h1>
+            <p class="para">Here's our Location if you wanna stop by in person!</p>
+
+           
+
+            <p class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.749826153403!2d-87.
+                75396342472409!3d41.919736462807464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88
+                0fcce983fa04bf%3A0x372249dbb651c063!2s2132%20N%20Lavergne%20Ave%2C%20Chicago%2C%20IL%2060639!
+                5e0!3m2!1sen!2sus!4v1716225339822!5m2!1sen!2sus" width="800" height="450" style="border:0;"
+                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </p>
+
+        </section>
+
+        <div class="description">
+            <h2><span style="color: red;">Zepedas</span> Auto care</span></h2>
+            <p>Zepedas auto care provides complete auto body repair services at affordable prices. If you live in the Chicago, IL area and are experiencing car troubles, contact us today!</p>
+        </div>
+
+        <div class="address">
+            <h4>Address</h4>
+            <p>2132 N Lavergne Ave</p>
+        </div>
+        <div class="hours">
+            <h4> Buisness <span style="color: red;">hours</span></h4>
+            <p>Mon-Fri 8:00Am - 5:00pm</p>
+            <p>Sat-Sun 9:00am - 1:00pm</p>
+        </div>
+
+        <div class="form-section">
+            <form action="" method="get">
+
+                <div class="box">
+                    <label for="name">Name</label>
+                    <br>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="box">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div  class="box">
+                    <label for="text">Subject</label>
+                    <br>
+                    <input type="text" name="subject" id="subject" required>
+                </div>
+
+                <div  class="box">
+                    <label>Comments</label>
+                    <br>
+                    <textarea type="text" id="comments" cols="100" row="50"></textarea>
+                </div>
+
+                <button type="reset" id="btn-last">Restart</button>
+                <button type="submit" id="btn-last">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+    <!--Javascript-->
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function(){
+            sidebar.classList.toggle('active');
+        };
+    </script>
+</html>
